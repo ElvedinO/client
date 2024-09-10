@@ -3,14 +3,16 @@ import EastOutlinedIcon from '@mui/icons-material/EastOutlined';
 import WestOutlinedIcon from '@mui/icons-material/WestOutlined';
 import './Slider.scss';
 
+import ShoppingCartOutliedIcon from '@mui/icons-material/ShoppingCartOutlined';
+
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const data = [
-    'https://images.pexels.com/photos/1549200/pexels-photo-1549200.jpeg?auto-compress&cs=tinys rgb&w=1600',
-    'https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto-compress&cs=tinys rgb&w=1600',
-    'https://images.pexels.com/photos/837140/pexels-photo-837140.jpeg?auto-compress&cs-tinys rgb&w=1600',
-  ];
+  // const data = [
+  //   'https://websitedemos.net/skin-cleanser-store-02/wp-content/uploads/sites/933/2021/08/skin-cleanser-template-hero-img-bg.jpg',
+  //   'https://images.pexels.com/photos/949670/pexels-photo-949670.jpeg?auto-compress&cs=tinys rgb&w=1600',
+  //   'https://images.pexels.com/photos/837140/pexels-photo-837140.jpeg?auto-compress&cs-tinys rgb&w=1600',
+  // ];
 
   const prevSlide = () => {
     setCurrentSlide(currentSlide === 0 ? 2 : (prev) => prev - 1);
@@ -21,21 +23,29 @@ const Slider = () => {
 
   return (
     <div className='slider'>
+      <img className='hero-leaves' src='./images/hero-leaves.png' alt='' />
       <div
         className='container'
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
-        <img src={data[0]} alt='' />
-        <img src={data[1]} alt='' />
-        <img src={data[2]} alt='' />
-      </div>
-
-      <div className='icons'>
-        <div className='icon' onClick={prevSlide}>
-          <WestOutlinedIcon />
+        <div className='left'>
+          <img className='hero-img' src='./images/hero.png' alt='' />
         </div>
-        <div className='icon' onClick={nextSlide}>
-          <EastOutlinedIcon />
+        <div className='right'>
+          <img src='./images/hero-leaf.png' alt='' />
+
+          <h2>Best Quality Products</h2>
+          <h1>Join The Organic Movement!</h1>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
+            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+          </p>
+          <div className='hero-btn'></div>
+
+          <button>
+            <ShoppingCartOutliedIcon />
+            SHOP NOW
+          </button>
         </div>
       </div>
     </div>

@@ -1,37 +1,66 @@
 .slider {
-  height: calc(100vh - 80px);
-  width: 100vw;
+  background-color: #fbfaf8;
   position: relative;
-  overflow: hidden;
 
-  .container {
-    width: 300vw;
-    height: 100%;
-    display: flex;
-    transition: all 1s ease;
-    img {
-      width: 100vw;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-  .icons {
-    width: fit-content;
-    display: flex;
+  .hero-leaves {
     position: absolute;
-    left: 0;
+    width: 25%;
     right: 0;
-    bottom: 100px;
-    gap: 10px;
-    margin: auto;
-    .icon {
-      width: 50px;
-      height: 50px;
-      border: 1px solid #999;
+    bottom: 0;
+    opacity: 25%;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 120px;
+    gap: 80px;
+    height: 80vh;
+    .hero-img {
+      max-width: 100%;
+      height: auto;
+    }
+    .right {
+      max-width: 30%;
+      height: auto;
+      color: #111;
+
+      font-family: 'Merriweather', serif;
       display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
+      flex-direction: column;
+      gap: 20px;
+      img {
+        width: 75px;
+      }
+      h2 {
+        font-size: 17px;
+      }
+      h1 {
+        font-size: 52px;
+      }
+      p {
+        font-family: 'Open Sans', sans-serif;
+        color: grey;
+      }
+      button {
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 0.875rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 160px;
+        padding: 13px 0;
+        background-color: #6a9739;
+        font-family: 'Open Sans', sans-serif;
+        transition: all 0.5s ease;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #86bd47;
+      }
     }
   }
 }

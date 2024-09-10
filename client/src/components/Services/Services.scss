@@ -1,0 +1,42 @@
+.services {
+  background-color: #111;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 50px 0;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    .service {
+      width: 285px;
+      display: flex;
+      justify-content: start;
+      gap: 10px;
+      font-family: 'Merriweather', serif;
+      color: #fff;
+      background-color: #303030;
+      padding: 30px 20px;
+      border-radius: 5px;
+      transition: all 0.5s ease;
+      .ser-icon {
+        color: #86bd47;
+        font-size: 35px;
+      }
+
+      h1 {
+        margin: 3px 0;
+        font-size: 20px;
+      }
+      p {
+        font-family: 'Open Sans', sans-serif;
+      }
+    }
+  }
+
+  .service:hover {
+    background-color: #4d4d4d;
+  }
+}

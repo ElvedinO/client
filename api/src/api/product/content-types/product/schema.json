@@ -29,17 +29,6 @@
         "audios"
       ]
     },
-    "img2": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "price": {
       "type": "decimal"
     },
@@ -66,6 +55,9 @@
         "featured",
         "trending"
       ]
+    },
+    "sdesc": {
+      "type": "string"
     }
   }
 }

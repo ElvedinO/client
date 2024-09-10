@@ -877,7 +877,6 @@ export interface ApiProductProduct extends Schema.CollectionType {
     title: Attribute.String;
     desc: Attribute.Text;
     img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    img2: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     price: Attribute.Decimal;
     isNew: Attribute.Boolean & Attribute.DefaultTo<false>;
     categories: Attribute.Relation<
@@ -891,6 +890,7 @@ export interface ApiProductProduct extends Schema.CollectionType {
       'api::sub-category.sub-category'
     >;
     type: Attribute.Enumeration<['normal', 'featured', 'trending']>;
+    sdesc: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

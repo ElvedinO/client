@@ -1,26 +1,36 @@
 .navbar {
-  height: 80px;
+  font-family: 'Open Sans', sans-serif;
+
+  background-color: #fff;
+  color: #000;
 
   .wrapper {
-    padding: 10px 30px;
+    padding: 15px 30px;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
 
     .item {
       display: flex;
       align-items: center;
-      font-size: 18px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    .item:hover {
+      color: #8bc34a;
     }
 
     .left {
       display: flex;
       align-items: center;
-      gap: 25px;
+      gap: 40px;
+
+      .logo {
+        width: 150px;
+        height: 70px;
+      }
     }
-    .center {
-      font-size: 30px;
-    }
+
     .right {
       display: flex;
       align-items: center;
@@ -29,18 +39,20 @@
     .icons {
       display: flex;
       gap: 15px;
-      color: #777;
+      color: #000;
       cursor: pointer;
 
       .cartIcon {
         position: relative;
+        color: #8bc34a;
         span {
-          font-size: 12px;
+          font-size: 14px;
+          font-weight: 500;
           width: 20px;
           height: 20px;
           border-radius: 50%;
-          background-color: #2879fe;
-          color: white;
+          background-color: #8bc34a;
+          color: #000;
           position: absolute;
           right: -10px;
           top: -10px;

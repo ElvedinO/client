@@ -13,16 +13,10 @@ const FeaturedProducts = ({ type }) => {
     <>
       <div className='featuredProducts'>
         <div className='top'>
-          <h1>{type} products</h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit,
-            nesciunt in consequuntur voluptate odio sapiente sed fuga, optio
-            fugit doloribus, maxime praesentium quia maiores distinctio nulla
-            omnis officia quos aliquid?
-          </p>
+          <h1>Best Selling Products</h1>
+          <img src='./images/hero-leaf.png' alt='' />
         </div>
-      </div>
-      <div className='featuredProducts'>
+
         <div className='bottom'>
           {error
             ? 'Something went wrong'
