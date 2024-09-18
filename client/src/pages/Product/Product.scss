@@ -1,110 +1,148 @@
 .product {
-  padding: 20px 50px;
+  background-color: #f8f6f3;
   display: flex;
-  gap: 50px;
-
-  .left {
-    flex: 1;
+  justify-content: center;
+  .wrapper {
     display: flex;
-    gap: 20px;
-
-    .images {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 50px;
+    gap: 40px;
+    width: 75vw;
+    .left {
       flex: 1;
-      img {
-        width: 100%;
-        height: 150px;
-        object-fit: cover;
-        cursor: pointer;
-        margin-bottom: 10px;
-      }
-    }
-    .mainImg {
-      flex: 5;
-
-      img {
-        width: 100%;
-        max-height: 800px;
-        object-fit: cover;
-      }
-    }
-  }
-  .right {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    .price {
-      font-size: 30px;
-      color: #2879fe;
-      font-weight: 500;
-    }
-
-    p {
-      font-size: 18px;
-      font-weight: 300;
-      text-align: justify;
-    }
-
-    .quantity {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-
-      button {
-        width: 50px;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        border: none;
-      }
-    }
-    .add {
-      width: 250px;
-      padding: 10px;
-      background-color: #2879fe;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      cursor: pointer;
-      border: none;
-      font-weight: 500;
-    }
-
-    .links {
       display: flex;
       gap: 20px;
 
-      .item {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        color: #2879fe;
-        font-size: 14px;
+      .images {
+        flex: 1;
+        img {
+          width: 100%;
+          height: 150px;
+          object-fit: cover;
+          cursor: pointer;
+          margin-bottom: 10px;
+        }
+      }
+      .mainImg {
+        flex: 5;
+
+        img {
+          width: 100%;
+          max-height: 800px;
+          object-fit: cover;
+        }
       }
     }
-
-    .info {
+    .right {
+      flex: 1;
       display: flex;
       flex-direction: column;
-      gap: 10px;
-      color: gray;
-      font-size: 14px;
-      margin-top: 30px;
+      align-self: flex-start;
+      gap: 20px;
+      h1 {
+        font-family: 'Merriweather', serif;
+      }
+      .price {
+        font-size: 30px;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 700;
+        span {
+          font-weight: normal;
+          color: grey;
+          font-size: 20px;
+        }
+      }
 
-      hr {
+      p {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 18px;
+        line-height: 30px;
+        text-align: justify;
+        color: grey;
+      }
+
+      .quantity {
         display: flex;
+        align-items: center;
+        font-weight: 700;
+        gap: 10px;
+        font-family: 'Open Sans', sans-serif;
 
-        width: 200px;
+        button {
+          color: grey;
+          border: 2px solid #86bd47;
+          border-radius: 100%;
+          font-weight: 700;
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+          padding: 13px 0;
+          background-color: #f8f6f3;
+          font-family: 'Open Sans', sans-serif;
+          transition: all 0.2s ease;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #86bd47;
+          color: white;
+        }
+        .add {
+          width: 200px;
+          padding: 20px;
+          background-color: #86bd47;
+          color: white;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 5px;
+          cursor: pointer;
+          border: none;
+          font-weight: 500;
+          transition: all 0.2s ease;
+        }
+        .add:hover {
+          background-color: #6a9739;
+        }
+      }
+
+      .links {
+        display: flex;
+        gap: 20px;
+
+        .item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: #2879fe;
+          font-size: 14px;
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        color: gray;
+        font-size: 14px;
+        margin-top: 30px;
+
+        hr {
+          display: flex;
+
+          width: 200px;
+          border: 1px solid rgb(238, 237, 237);
+        }
+      }
+      hr {
+        width: 100%;
         border: 1px solid rgb(238, 237, 237);
       }
-    }
-    hr {
-      width: 100%;
-      border: 1px solid rgb(238, 237, 237);
     }
   }
 }

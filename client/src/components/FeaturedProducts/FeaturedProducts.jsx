@@ -13,7 +13,7 @@ const FeaturedProducts = ({ type }) => {
     <>
       <div className='featuredProducts'>
         <div className='top'>
-          <h1>Best Selling Products</h1>
+          <h1>{type === 'featured' ? 'Best selling' : 'Trending'} Products</h1>
           <img src='./images/hero-leaf.png' alt='' />
         </div>
 

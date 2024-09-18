@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Cart.scss';
-import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
+import CloseIcon from '@mui/icons-material/Close';
 import { useDispatch, useSelector } from 'react-redux';
 import { removeItem, resetCart } from '../../redux/cartReducer';
 import { loadStripe } from '@stripe/stripe-js';
 import { makeRequest } from '../../makeRequest';
 
-const Cart = () => {
+const Cart = ({ isOpen, onClose }) => {
   const products = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
 
@@ -35,35 +36,47 @@ const Cart = () => {
   };
 
   return (
-    <div className='cart'>
-      <h1>Products in your cart</h1>
-      {products?.map((item) => (
-        <div className='item' key={item.id}>
-          <img src={process.env.REACT_APP_UPLOAD_URL + item.img} alt='' />
-          <div className='details'>
-            <h1>{item.title}</h1>
-            <p>{item.desc?.substring(0, 100)}</p>
-            <div className='price'>
-              {item.quantity}x${item.price}
-            </div>
-          </div>
-          <DeleteOutlinedIcon
-            className='delete'
-            onClick={() => dispatch(removeItem(item.id))}
-          />
+    <>
+      {isOpen && <div className='cart-overlay' onClick={onClose}></div>}
+      <div className={`cart ${isOpen ? 'open' : ''}`}>
+        <div className='cart-header'>
+          <h1>Products in your cart</h1>
+          <CloseIcon className='close-icon' onClick={onClose} />
         </div>
-      ))}
-      <div className='total'>
-        <span>SUBTOTAL</span>
-
-        <span>{totalPrice()}$</span>
+        <div className='items'>
+          {products?.map((item) => (
+            <div className='item' key={item.id}>
+              <div className='prod-container'>
+                <img src={process.env.REACT_APP_UPLOAD_URL + item.img} alt='' />
+                <div className='details'>
+                  <h1>{item.title}</h1>
+                  <p>{item.desc?.substring(0, 100)}</p>
+                  <div className='price'>
+                    {item.quantity} x ${item.price}.00
+                  </div>
+                </div>
+              </div>
+              <CancelOutlinedIcon
+                className='delete'
+                onClick={() => dispatch(removeItem(item.id))}
+              />
+            </div>
+          ))}
+        </div>
+        <div className='cart-bottom'>
+          <div className='total'>
+            <span>SUBTOTAL</span>
+            <span>{totalPrice()}$</span>
+          </div>
+          <div className='checkout'>
+            <button onClick={handlePayment}>PROCEED TO CHECKOUT</button>
+            <span className='reset' onClick={() => dispatch(resetCart())}>
+              Reset cart
+            </span>
+          </div>
+        </div>
       </div>
-
-      <button onClick={handlePayment}>PROCEED TO CHECKOUT</button>
-      <span className='reset' onClick={() => dispatch(resetCart())}>
-        Reset cart
-      </span>
-    </div>
+    </>
   );
 };
 

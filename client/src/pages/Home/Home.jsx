@@ -4,7 +4,7 @@ import Services from '../../components/Services/Services';
 import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts';
 import './Home.scss';
 import Categories from '../../components/Categories/Categories';
-import Contact from '../../components/Contact/Contact';
+import Customers from '../../components/Contact/Customers';
 
 const Home = () => {
   return (
@@ -14,7 +14,7 @@ const Home = () => {
       <FeaturedProducts type='featured' />
       <Categories />
       <FeaturedProducts type='trending' />
-      <Contact />
+      <Customers />
     </div>
   );
 };

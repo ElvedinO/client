@@ -10,8 +10,11 @@ import Cart from '../Cart/Cart';
 import { useSelector } from 'react-redux';
 
 const Navbar = () => {
-  const [open, setOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const products = useSelector((state) => state.cart.products);
+
+  const openCart = () => setIsCartOpen(true);
+  const closeCart = () => setIsCartOpen(false);
 
   return (
     <>
@@ -51,7 +54,7 @@ const Navbar = () => {
             </div>
 
             <div className='icons'>
-              <div className='cartIcon' onClick={() => setOpen(!open)}>
+              <div className='cartIcon' onClick={openCart}>
                 <ShoppingCartOutliedIcon />
                 <span>{products.length}</span>
               </div>
@@ -60,7 +63,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        {open && <Cart />}
+        <Cart isOpen={isCartOpen} onClose={closeCart} />
       </div>
     </>
   );

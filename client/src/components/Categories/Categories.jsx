@@ -1,89 +1,64 @@
 import React from 'react';
 import './Categories.scss';
 import { Link } from 'react-router-dom';
-
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import ShoppingCartOutliedIcon from '@mui/icons-material/ShoppingCartOutlined';
 const Categories = () => {
   return (
-    <div className='categories'>
-      <div className='col'>
-        <div className='row'>
-          <img
-            src='https://images.pexels.com/photos/5119198/pexels-photo-5119198.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            alt=''
-          />
-          <button>
-            <Link className='link' to='/products/1'>
-              Sale
-            </Link>
-          </button>
-        </div>
-        <div className='row'>
-          <img
-            src='https://images.pexels.com/photos/5885998/pexels-photo-5885998.jpeg?auto=compress&cs=tinysrgb&w=1260'
-            alt=''
-          />
-          <button>
-            <Link className='link' to='/products/1'>
-              Women
-            </Link>
-          </button>
-        </div>
-      </div>
-      <div className='col'>
-        <div className='row'>
-          <img
-            src='https://images.pexels.com/photos/914668/pexels-photo-914668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            alt=''
-          />
-          <button>
-            <Link className='link' to='/products/1'>
-              New Season
-            </Link>
-          </button>
-        </div>
-      </div>
-      <div className='col col-l'>
-        <div className='row'>
-          <div className='col'>
-            <div className='row'>
-              <img
-                src='https://images.pexels.com/photos/6310988/pexels-photo-6310988.jpeg?auto=compress&cs=tinysrgb&w=1260'
-                alt=''
-              />
-              <button>
-                <Link className='link' to='/products/1'>
-                  Men
-                </Link>
+    <>
+      <div className='categories'>
+        <img className='leaf' src='./images/basil-leaf.png' alt='' />
+        <div className='container'>
+          <div className='fresh-cat'>
+            <div className='item'>
+              <h1>Farm Frest Fruits</h1>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum,
+                alias!
+              </p>
+              <button className='cat-btn'>
+                <ArrowForwardIcon /> SHOP NOW
               </button>
+              <img src='./images/product1.jpg' alt='' />
             </div>
-          </div>
-          <div className='col'>
-            <div className='row'>
-              <img
-                src='https://images.pexels.com/photos/1453008/pexels-photo-1453008.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-                alt=''
-              />
-              <button>
-                <Link className='link' to='/products/1'>
-                  Accessories
-                </Link>
+            <div className='item'>
+              <h1>Fresh Vegetables</h1>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum,
+                alias!
+              </p>
+              <button className='cat-btn'>
+                <ArrowForwardIcon /> SHOP NOW
               </button>
+              <img src='./images/product2.jpg' alt='' />
+            </div>
+            <div className='item'>
+              <h1>Organic Legume</h1>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum,
+                alias!
+              </p>
+              <button className='cat-btn'>
+                <ArrowForwardIcon /> SHOP NOW
+              </button>
+
+              <img src='./images/product3.jpg' alt='' />
             </div>
           </div>
         </div>
-        <div className='row'>
-          <img
-            src='https://images.pexels.com/photos/776219/pexels-photo-776219.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
-            alt=''
-          />
-          <button>
-            <Link className='link' to='/products/1'>
-              Shoes
-            </Link>
-          </button>
+        <div className='bottom'>
+          <div className='bott-con'>
+            <h1>Get 25% Off On Your First Purchase!</h1>
+            <button>
+              <ShoppingCartOutliedIcon />
+              SHOP NOW
+            </button>
+          </div>
+          <div className='arrow'></div>
         </div>
+        <p className='try'>Try It For Free. No Registration Needed.</p>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,50 +1,82 @@
 .footer {
-  margin: 100px 200px 20px 200px;
-  .top {
-    display: flex;
-    gap: 50px;
-    .item {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      text-align: justify;
-      font-size: 14px;
-
-      h1 {
-        font-size: 18px;
-        font-weight: 500;
-        color: #555;
-      }
-      span {
-        color: grey;
-      }
-    }
+  font-family: 'Open Sans', sans-serif;
+  background-color: #111;
+  color: white;
+  padding: 50px 0;
+  gap: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    font-family: 'Merriweather', serif;
+    margin-bottom: 20px;
   }
-  .bottom {
+  a {
+    margin-bottom: 5px;
+    color: grey;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  a:hover {
+    color: #fff;
+  }
+  .wrapper {
+    width: 75%;
+    margin: 30px;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 50px;
+    justify-content: center;
+    gap: 100px;
+
     .left {
       display: flex;
-      align-items: center;
-
-      .logo {
-        color: #2879fe;
-        font-weight: bold;
-        font-size: 24px;
-      }
-
-      .copyright {
-        margin-left: 20px;
-        font-size: 12px;
-        color: grey;
+      flex-direction: column;
+      gap: 50px;
+      color: hsla(0, 0%, 100%, 0.664);
+      font-weight: 700;
+      font-style: italic;
+      line-height: 26px;
+      width: 40%;
+      img {
+        width: 180px;
       }
     }
     .right {
-      img {
-        height: 50px;
+      display: flex;
+      gap: 80px;
+      width: 60%;
+
+      .f-img {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 125px;
+        margin-top: 10px;
+      }
+      .r-right {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        gap: 40px;
+
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .r-left {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        p {
+          color: grey;
+          font-weight: 500;
+        }
+        div {
+          display: flex;
+          flex-direction: column;
+        }
       }
     }
   }

@@ -1,5 +1,12 @@
 .slider {
-  background-color: #fbfaf8;
+  background-image: linear-gradient(
+    to right,
+    #ffffff,
+    #fdfcfd,
+    #fcf9f9,
+    #faf6f4,
+    #f6f4f0
+  );
   position: relative;
 
   .hero-leaves {

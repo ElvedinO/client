@@ -1,75 +1,150 @@
+.cart-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+}
+
 .cart {
-  position: absolute;
-  right: 20px;
-  top: 80px;
+  font-family: 'Open Sans', sans-serif;
+  position: fixed;
+  right: -35vw;
+  top: 0;
+  bottom: 0;
+  width: 35vw;
+
   z-index: 999;
   background-color: white;
-  padding: 20px;
-  box-shadow: 0px 0px 7px -5px rgba($color: #000000, $alpha: 0.5);
 
-  h1 {
-    margin-bottom: 30px;
-    color: gray;
-    font-size: 24px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease-in-out;
+  overflow-y: auto;
+
+  display: flex;
+  flex-direction: column;
+
+  &.open {
+    right: 0;
   }
 
-  .item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
-    img {
-      width: 80px;
-      height: 100px;
-      object-fit: cover;
-    }
-
-    .details {
-      h1 {
-        font-size: 18px;
-        font-weight: 500;
-      }
-      p {
-        color: grey;
-        margin-bottom: 10px;
-        font-size: 14px;
-      }
-      .price {
-        color: #2879fe;
-      }
-    }
-    .delete {
-      color: red;
-      cursor: pointer;
-      font-size: 30px;
-    }
-  }
-  .total {
+  .cart-header {
     display: flex;
     justify-content: space-between;
-    font-weight: 500;
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-
-  button {
-    width: 250px;
-    padding: 10px;
-    display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
-    cursor: pointer;
-    border: none;
-    background-color: #2879fe;
-    color: white;
-    font-weight: 500;
     margin-bottom: 20px;
-  }
+    border-bottom: 2px solid hsla(0, 0%, 50%, 0.158);
+    h1 {
+      font-size: 24px;
+      margin: 20px;
+      font-weight: 400;
+    }
 
-  .reset {
-    color: red;
-    font-size: 12px;
-    cursor: pointer;
+    .close-icon {
+      cursor: pointer;
+      font-size: 34px;
+      margin-right: 20px;
+    }
+  }
+  .items {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    .item {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: start;
+      gap: 20px;
+      margin: 20px;
+
+      .prod-container {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        img {
+          width: 25%;
+          object-fit: cover;
+        }
+        .details {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          h1 {
+            font-size: 18px;
+            font-weight: normal;
+          }
+          p {
+            color: grey;
+            margin-bottom: 10px;
+            font-size: 14px;
+          }
+          .price {
+            color: grey;
+          }
+        }
+      }
+      .delete {
+        color: grey;
+        align-self: center;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      .delete:hover {
+        color: rgba(17, 17, 17, 0.74);
+      }
+    }
+  }
+  .cart-bottom {
+    display: flex;
+    flex-direction: column;
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+      border-top: 2px solid hsla(0, 0%, 50%, 0.158);
+      border-bottom: 2px solid hsla(0, 0%, 50%, 0.158);
+    }
+    .checkout {
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      button {
+        flex: 2;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-weight: 700;
+        font-size: 0.875rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 160px;
+        padding: 13px 0;
+        background-color: #6a9739;
+        font-family: 'Open Sans', sans-serif;
+        cursor: pointer;
+        transition: all 0.5s ease;
+      }
+      button:hover {
+        background-color: #86bd47;
+      }
+      .reset {
+        cursor: pointer;
+        color: red;
+        border: 1px solid red;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+      .reset:hover {
+        background-color: red;
+        color: white;
+      }
+    }
   }
 }
