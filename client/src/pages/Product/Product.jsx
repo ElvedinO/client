@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import './Product.scss';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import Balancelcon from '@mui/icons-material/Balance';
+
 import useFetch from '../../hooks/useFetch';
 import { useParams } from 'react-router-dom';
 import { useDispatch } from 'react-redux';

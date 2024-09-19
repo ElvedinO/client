@@ -4,9 +4,9 @@ import List from '../../components/List/List';
 import { useParams } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
 
-const Products = () => {
+const Products = ({ item }) => {
   const catId = parseInt(useParams().id);
-  const [maxPrice, setMaxPrice] = useState(1000);
+  const [maxPrice, setMaxPrice] = useState(100);
   const [sort, setSort] = useState(0);
   const [selectedSubCats, setSelectedSubCats] = useState([]);
 
@@ -25,12 +25,10 @@ const Products = () => {
     );
   };
 
-  console.log(selectedSubCats);
-
   return (
     <div className='products'>
       <div className='left'>
-        <div className='filterItem'>
+        {/* <div className='filterItem'>
           <h2>Product Categories</h2>
           {data?.map((item) => (
             <div className='inputItem' key={item.id}>
@@ -43,16 +41,17 @@ const Products = () => {
               <label htmlFor={item.id}>{item.attributes.title}</label>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <div className='filterItem'>
           <h2>Filter by price</h2>
           <div className='inputItem'>
-            <span>0</span>
+            <span>15</span>
             <input
+              className='range-slider'
               type='range'
-              min={0}
-              max={1000}
+              min={15}
+              max={100}
               onChange={(e) => setMaxPrice(e.target.value)}
             />
             <span>{maxPrice}</span>
@@ -60,18 +59,23 @@ const Products = () => {
         </div>
         <div className='filterItem'>
           <h2>Sort by</h2>
+
           <div className='inputItem'>
             <input
+              className='radio'
               type='radio'
               id='asc'
               value='asc'
               name='price'
               onChange={(e) => setSort('asc')}
             />
-            <label htmlFor='asc'>Price (Lowest first)</label>
+            <label htmlFor='asc' className='radio' checked>
+              Price (Lowest first)
+            </label>
           </div>
           <div className='inputItem'>
             <input
+              className='radio'
               type='radio'
               id='desc'
               value='desc'
@@ -84,11 +88,7 @@ const Products = () => {
       </div>
 
       <div className='right'>
-        <img
-          className='catImg'
-          src='https://images.pexels.com/photos/1074535/pexels-photo-1074535.jpeg?auto=compress&cs=tinysrgb&w=1600'
-          alt=''
-        />
+        <h1>{item?.attributes.sdesc}</h1>
         <List
           catId={catId}
           maxPrice={maxPrice}

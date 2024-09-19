@@ -11,12 +11,90 @@
     .filterItem {
       margin-bottom: 30px;
       h2 {
+        font-family: 'Merriweather', serif;
         font-weight: 400;
         margin-bottom: 20px;
       }
       .inputItem {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 500;
         margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        .range-slider {
+          -webkit-appearance: none;
+          height: 4px;
+          border-radius: 5px;
+          background: #d5dbe1;
+          outline: none;
+          opacity: 0.7;
+          -webkit-transition: 0.2s;
+          transition: opacity 0.2s;
+        }
+
+        .range-slider::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: #8bc34a;
+          cursor: pointer;
+          transition: 0.3s ease-in-out;
+        }
+
+        .range-slider::-webkit-slider-thumb:hover {
+          box-shadow: 0px 0px 0px 8px rgba(139, 195, 74, 0.26);
+          transition: 0.3s ease-in-out;
+        }
+
+        .range-slider::-moz-range-thumb {
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          background-color: #000000;
+          cursor: pointer;
+        }
+        // .range-input {
+        //   appearance: none;
+        //   border-radius: 5px;
+        //   background-color: #8bc34a;
+        //   height: 5px;
+        //   outline: none;
+        //   opacity: 0.7;
+        //   -webkit-transition: 0.2s;
+        //   transition: opacity 0.2s;
+        // }
+        // .range-input::-webkit-slider-thumb {
+        //   -webkit-appearance: none;
+        //   appearance: none;
+        //   width: 15px;
+        //   height: 15px;
+        //   border-radius: 50%;
+        //   background-color: #8bc34a;
+
+        //   cursor: pointer;
+        // }
+
+        // .range-input::-moz-range-thumb {
+        //   width: 15px;
+        //   height: 15px;
+        //   border-radius: 50%;
+        //   background-color: #8bc34a;
+
+        //   cursor: pointer;
+        // }
+        // .radio-input {
+        //   appearance: none;
+        //   border-radius: 5px;
+        //   background-color: #8bc34a;
+        //   height: 5px;
+        //   width: 5px;
+        // }
         label {
+          font-family: 'Open Sans', sans-serif;
           margin-left: 10px;
         }
       }

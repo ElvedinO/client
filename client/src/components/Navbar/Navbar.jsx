@@ -21,7 +21,14 @@ const Navbar = () => {
       <div className='navbar'>
         <div className='wrapper'>
           <div className='left'>
-            <img className='logo ' src='./images/logo.svg' alt='' />
+            <Link>
+              <img
+                className='logo '
+                src='./images/logo.svg'
+                alt=''
+                to='http://localhost:3000/'
+              />
+            </Link>
             {/* <KeyboardArrowDownIcon /> */}
 
             <div className='item'>
