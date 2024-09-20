@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home/Home';
 import Product from './pages/Product/Product';
 import Products from './pages/Products/Products';
+import About from './components/About/About';
 import './app.scss';
 
 const Layout = () => {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
         path: '/product/:id',
         element: <Product />,
       },
+      {
+        path: '/about',
+        element: <About />,
+      },
     ],
   },
 ]);
@@ -42,7 +47,6 @@ const router = createBrowserRouter([
 function App() {
   return (
     <div>
-      {' '}
       <RouterProvider router={router} />
     </div>
   );

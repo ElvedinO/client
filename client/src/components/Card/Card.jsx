@@ -19,7 +19,9 @@ const Card = ({ item }) => {
         </div>
       </Link>
       <h2 className='short-desc'>{item?.attributes.sdesc}</h2>
-      <h2>{item?.attributes.title}</h2>
+      <Link to={`/product/${item.id}`}>
+        <h2>{item?.attributes.title}</h2>
+      </Link>
       <div className='stars'>
         <StarBorderIcon />
         <StarBorderIcon />

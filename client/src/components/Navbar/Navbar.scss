@@ -14,9 +14,17 @@
       align-items: center;
       font-size: 16px;
       transition: all 0.3s ease;
-    }
-    .item:hover {
-      color: #8bc34a;
+
+      .link {
+        color: #000;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover,
+        &.clicked {
+          color: #8bc34a;
+        }
+      }
     }
 
     .left {

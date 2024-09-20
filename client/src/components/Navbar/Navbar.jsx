@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import SearchIcon from '@mui/icons-material/Search';
 import PersonOutlineIcon from '@mui/icons-material/PersonOutlineOutlined';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ShoppingCartOutliedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import { Link } from 'react-router-dom';
 import './Navbar.scss';
@@ -11,38 +8,60 @@ import { useSelector } from 'react-redux';
 
 const Navbar = () => {
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [clickedLink, setClickedLink] = useState('');
   const products = useSelector((state) => state.cart.products);
 
   const openCart = () => setIsCartOpen(true);
   const closeCart = () => setIsCartOpen(false);
 
+  const handleLinkClick = (linkName) => {
+    setClickedLink(linkName);
+  };
+
   return (
     <>
-      <div className='navbar'>
+      <div
+        className='navbar'
+        style={
+          window.location.href.split('/').includes('about')
+            ? { backgroundColor: '#F8F6F3' }
+            : null
+        }
+      >
         <div className='wrapper'>
           <div className='left'>
-            <Link>
-              <img
-                className='logo '
-                src='./images/logo.svg'
-                alt=''
-                to='http://localhost:3000/'
-              />
+            <Link to='http://localhost:3000/'>
+              <img className='logo ' src='./images/logo.svg' alt='' />
             </Link>
-            {/* <KeyboardArrowDownIcon /> */}
 
             <div className='item'>
-              <Link className='link ' to='products/1'>
+              <Link
+                className={`link ${
+                  clickedLink === 'everything' ? 'clicked' : ''
+                }`}
+                to='products/1'
+                onClick={() => handleLinkClick('everything')}
+              >
                 Everything
               </Link>
             </div>
             <div className='item'>
-              <Link className='link' to='products/2'>
+              <Link
+                className={`link ${
+                  clickedLink === 'groceries' ? 'clicked' : ''
+                }`}
+                to='products/2'
+                onClick={() => handleLinkClick('groceries')}
+              >
                 Groceries
               </Link>
             </div>
             <div className='item'>
-              <Link className='link' to='products/3'>
+              <Link
+                className={`link ${clickedLink === 'juice' ? 'clicked' : ''}`}
+                to='products/3'
+                onClick={() => handleLinkClick('juice')}
+              >
                 Juice
               </Link>
             </div>
@@ -50,12 +69,21 @@ const Navbar = () => {
 
           <div className='right'>
             <div className='item'>
-              <Link className='link' to='/'>
+              <Link
+                className={`link ${clickedLink === 'about' ? 'clicked' : ''}`}
+                to='/about' // Change this to the correct path for your About page
+                onClick={() => handleLinkClick('about')}
+              >
                 About
               </Link>
             </div>
+
             <div className='item'>
-              <Link className='link' to='/'>
+              <Link
+                className={`link ${clickedLink === 'contact' ? 'clicked' : ''}`}
+                to='/'
+                onClick={() => handleLinkClick('contact')}
+              >
                 Contact
               </Link>
             </div>
