@@ -1,5 +1,5 @@
 import React from 'react';
-import Slider from '../../components/Slider/Slider';
+import Hero from '../../components/Hero/Hero';
 import Services from '../../components/Services/Services';
 import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts';
 import './Home.scss';
@@ -9,7 +9,7 @@ import Customers from '../../components/Contact/Customers';
 const Home = () => {
   return (
     <div className='home'>
-      <Slider />
+      <Hero />
       <Services />
       <FeaturedProducts type='featured' />
       <Categories />
