@@ -8,65 +8,126 @@
     #f6f4f0
   );
   position: relative;
+  overflow: hidden;
 
   .hero-leaves {
     position: absolute;
     width: 25%;
+    max-width: 300px;
     right: 0;
     bottom: 0;
     opacity: 25%;
   }
+
   .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 120px;
-    gap: 80px;
-    height: 80vh;
-    .hero-img {
-      max-width: 100%;
-      height: auto;
-    }
-    .right {
-      max-width: 30%;
-      height: auto;
-      color: #111;
+    padding: 5% 10%;
+    gap: 5%;
+    min-height: 80vh;
 
+    .left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hero-img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .right {
+      flex: 1;
+      max-width: 500px;
+      color: #111;
       font-family: 'Merriweather', serif;
       display: flex;
       flex-direction: column;
       gap: 20px;
-      img {
+
+      .leaf-icon {
         width: 75px;
+        max-width: 15%;
       }
+
       h2 {
-        font-size: 17px;
+        font-size: clamp(14px, 2vw, 17px);
       }
+
       h1 {
-        font-size: 52px;
+        font-size: clamp(32px, 5vw, 52px);
+        line-height: 1.2;
       }
+
       p {
         font-family: 'Open Sans', sans-serif;
         color: grey;
+        font-size: clamp(14px, 1.5vw, 16px);
       }
-      button {
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-weight: 700;
-        font-size: 0.875rem;
-        display: flex;
+
+      .hero-btn {
+        button {
+          color: white;
+          border: none;
+          border-radius: 5px;
+          font-weight: 700;
+          font-size: clamp(12px, 1.5vw, 14px);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: clamp(120px, 20vw, 160px);
+          padding: clamp(10px, 2vw, 13px) 0;
+          background-color: #6a9739;
+          font-family: 'Open Sans', sans-serif;
+          transition: all 0.5s ease;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #86bd47;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 5%;
+      gap: 30px;
+
+      .left,
+      .right {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .right {
         align-items: center;
-        justify-content: center;
-        width: 160px;
-        padding: 13px 0;
-        background-color: #6a9739;
-        font-family: 'Open Sans', sans-serif;
-        transition: all 0.5s ease;
-        cursor: pointer;
+        text-align: center;
+
+        h1,
+        h2,
+        p {
+          max-width: 90%;
+        }
       }
-      button:hover {
-        background-color: #86bd47;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-leaves {
+      width: 40%;
+    }
+
+    .container {
+      .right {
+        h1 {
+          font-size: clamp(28px, 7vw, 32px);
+        }
       }
     }
   }
