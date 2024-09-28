@@ -20,7 +20,7 @@ const Hero = () => {
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
         <div className='left'>
-          <img className='hero-img' src='./images/hero.png' alt='' />
+          <img className='hero-img' src='./images/hero.webp' alt='' />
         </div>
         <div className='right'>
           <img src='./images/hero-leaf.png' alt='' className='leaf-icon' />

@@ -110,6 +110,10 @@ const Navbar = () => {
 
         <div className={`menu-content ${isMenuOpen ? 'open' : ''}`}>
           <nav>
+            <CloseIcon
+              className={`close ${isMenuOpen ? 'open' : ''}`}
+              onClick={toggleMenu}
+            />
             <ul>
               <li>
                 <Link
@@ -156,7 +160,7 @@ const Navbar = () => {
                   className={`link ${
                     clickedLink === 'contact' ? 'clicked' : ''
                   }`}
-                  to='/'
+                  to='/contact'
                   onClick={() => handleLinkClick('contact')}
                 >
                   Contact
