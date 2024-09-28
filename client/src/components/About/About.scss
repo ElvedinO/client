@@ -2,12 +2,15 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+
   h1 {
     font-family: 'Merriweather', serif;
   }
+
   p {
     font-family: 'Open Sans', sans-serif;
   }
+
   .top {
     background-color: #f8f6f3;
     display: flex;
@@ -17,43 +20,62 @@
     height: 250px;
 
     .title {
-      font-size: 52px;
+      font-size: clamp(32px, 5vw, 52px);
+      text-align: center;
     }
   }
+
   .wrapper {
-    width: 60%;
-    padding: 80px 0;
-    justify-content: center;
-    align-self: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 40px 0;
+
     .bottom {
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
+
       .leaf {
         position: absolute;
         left: 0;
         right: 0;
-        top: -125px;
+        top: -75px;
         margin-inline: auto;
+        max-width: 150px;
       }
+
       .bot-wrap {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
-        gap: 80px;
-        padding: 80px 0;
+        gap: 40px;
+        margin: 50px 0;
+
+        .bot-left {
+          width: 50%;
+        }
+        .bot-right {
+          width: 50%;
+          img {
+            border-radius: 15px;
+          }
+        }
         h1 {
           margin-bottom: 20px;
+          font-size: clamp(24px, 4vw, 34px);
         }
+
         img {
-          width: 580px;
-          height: 340px;
+          max-width: 100%;
+          height: auto;
         }
       }
     }
   }
+
   .numbers {
     display: flex;
     flex-wrap: wrap;
@@ -61,21 +83,31 @@
     justify-content: center;
     background-color: #111;
     color: white;
-    height: 150px;
+    padding: 40px 0;
 
     .num-wrap {
-      width: 60%;
+      width: 90%;
+      max-width: 1200px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      h1 {
+        font-size: clamp(24px, 4vw, 34px);
+        text-align: center;
+        width: 100%;
+      }
 
       .number {
         font-family: 'Open Sans', sans-serif;
         text-align: center;
-        font-size: 46px;
+        font-size: clamp(32px, 5vw, 46px);
         font-weight: 600;
+
         p {
-          font-size: 19px;
+          font-size: clamp(16px, 3vw, 19px);
           padding-top: 10px;
         }
       }
@@ -87,24 +119,36 @@
     background-color: #fdfdfc;
     display: flex;
     flex-wrap: wrap;
+
     .leaves {
       position: absolute;
       width: 25%;
       right: 0;
       bottom: 0;
       opacity: 25%;
+      max-width: 300px;
     }
+
     .wrapper {
       display: flex;
       margin: auto;
       align-items: center;
       justify-content: center;
-      gap: 100px;
+      gap: 50px;
+      flex-wrap: wrap;
+      width: 90%;
+      max-width: 1200px;
+      padding: 40px 0;
+
+      .left,
+      .right {
+        flex: 1 1 300px;
+      }
+
       .left {
         display: flex;
         text-align: center;
         z-index: 2;
-        flex: 1;
 
         .review {
           font-weight: 400;
@@ -115,7 +159,8 @@
           position: relative;
           gap: 20px;
           z-index: 3;
-          padding: 0 20px 20px 40px;
+          padding: 20px;
+
           .overlay {
             position: absolute;
             bottom: 0;
@@ -125,13 +170,34 @@
             border-radius: 15px;
             z-index: -1;
           }
+
           .images {
-            width: 450px;
-            height: 500px;
+            width: 100%;
+            max-width: 450px;
+            height: auto;
+
+            overflow: hidden;
+
+            .container__slider {
+              width: 100%;
+              height: 100%;
+
+              .slider__item {
+                width: 100%;
+                height: 100%;
+
+                img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover; // This ensures the image covers the entire container
+                }
+              }
+            }
           }
           .stars {
             color: #ffd700;
           }
+
           .cust-img {
             display: flex;
             align-items: center;
@@ -139,41 +205,53 @@
           }
         }
       }
+
       .right {
         display: flex;
         flex-direction: column;
         gap: 30px;
-        flex: 1;
+
         .cert {
           display: flex;
           align-items: center;
           gap: 20px;
+          flex-wrap: wrap;
+
           img {
             width: 117px;
           }
+
           h1 {
-            font-size: 24px;
+            font-size: clamp(20px, 3vw, 24px);
             margin-bottom: 10px;
           }
         }
+
         .leaf {
           width: 75px;
           height: 33px;
         }
+
         h1 {
-          font-size: 34px;
+          font-size: clamp(24px, 4vw, 34px);
         }
+
         .offers {
           font-family: 'Open Sans', sans-serif;
           display: flex;
-          gap: 100px;
+          gap: 50px;
+          flex-wrap: wrap;
+
           .check {
             color: #86bd47;
           }
-          .off-left {
+
+          .off-left,
+          .off-right {
             display: flex;
             flex-direction: column;
             gap: 10px;
+            flex: 1 1 200px;
 
             div {
               display: flex;
@@ -181,17 +259,8 @@
               gap: 10px;
             }
           }
-          .off-right {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            div {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-            }
-          }
         }
+
         button {
           color: white;
           border: none;
@@ -207,9 +276,158 @@
           font-family: 'Open Sans', sans-serif;
           transition: all 0.5s ease;
           cursor: pointer;
+
+          &:hover {
+            background-color: #86bd47;
+          }
         }
-        button:hover {
-          background-color: #86bd47;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .about {
+    .wrapper {
+      width: 95%;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .about {
+    .wrapper {
+      .bottom {
+        .bot-wrap {
+          flex-direction: column;
+          text-align: center;
+          .bot-left {
+            width: 80%;
+          }
+          .bot-right {
+            width: 80%;
+          }
+        }
+      }
+    }
+
+    .numbers {
+      .num-wrap {
+        justify-content: center;
+      }
+    }
+
+    .certified {
+      .wrapper {
+        .left,
+        .right {
+          flex: 1 1 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    .top {
+      height: 200px;
+    }
+
+    .wrapper {
+      .bottom {
+        .bot-wrap {
+          gap: 30px;
+        }
+      }
+    }
+
+    .numbers {
+      .num-wrap {
+        .number {
+          width: 45%;
+        }
+      }
+    }
+
+    .certified {
+      .wrapper {
+        .left {
+          .review {
+            .images {
+              max-width: 100%;
+            }
+          }
+        }
+        .right {
+          align-items: center;
+          .cert {
+            flex-direction: column;
+            text-align: center;
+          }
+          .offers {
+            gap: 10px;
+            .off-left {
+              flex: 1 1;
+            }
+            .off-right {
+              flex: 1 1;
+            }
+          }
+          h1 {
+            text-align: center;
+          }
+          .offers {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    .top {
+      height: 150px;
+    }
+
+    .wrapper {
+      .bottom {
+        .bot-wrap {
+          gap: 20px;
+        }
+      }
+    }
+
+    .numbers {
+      .num-wrap {
+        .number {
+          width: 100%;
+        }
+      }
+    }
+
+    .certified {
+      .wrapper {
+        .left {
+          .review {
+            .images {
+              aspect-ratio: 1 / 1; // Make it square for very small screens
+            }
+          }
+        }
+        .right {
+          .cert {
+            flex-direction: column;
+            text-align: center;
+          }
+          .offers {
+            flex-direction: column;
+          }
+          button {
+            align-self: center;
+          }
         }
       }
     }

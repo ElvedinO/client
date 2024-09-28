@@ -4,7 +4,7 @@ import Services from '../../components/Services/Services';
 import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts';
 import './Home.scss';
 import Categories from '../../components/Categories/Categories';
-import Customers from '../../components/Contact/Customers';
+import Customers from '../../components/Customers/Customers';
 
 const Home = () => {
   return (

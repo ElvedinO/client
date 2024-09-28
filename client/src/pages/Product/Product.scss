@@ -69,7 +69,11 @@
         font-weight: 700;
         gap: 10px;
         font-family: 'Open Sans', sans-serif;
-
+        .q-buttons {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
         button {
           color: grey;
           border: 2px solid #86bd47;
@@ -143,6 +147,22 @@
         width: 100%;
         border: 1px solid rgb(238, 237, 237);
       }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .product .wrapper {
+    padding: 20px 0px;
+    width: 90vw;
+    flex-direction: column;
+    h1 {
+      text-align: center;
+    }
+    .quantity {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
   }
 }

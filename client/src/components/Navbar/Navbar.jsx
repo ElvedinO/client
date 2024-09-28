@@ -87,17 +87,17 @@ const Navbar = () => {
                 Contact
               </Link>
             </div>
-            <div className='hamburger-menu'>
-              <button className='menu-toggle' onClick={toggleMenu}>
-                {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
-              </button>
-            </div>
+
             <div className='icons'>
               <div className='cartIcon' onClick={openCart}>
                 <ShoppingCartOutliedIcon />
                 <span>{products.length}</span>
               </div>
-              <PersonOutlineIcon />
+            </div>
+            <div className='hamburger-menu'>
+              <button className='menu-toggle' onClick={toggleMenu}>
+                {isMenuOpen ? <CloseIcon /> : <MenuIcon />}
+              </button>
             </div>
           </div>
         </div>

@@ -3,33 +3,40 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-
   background-color: #f8f6f3;
+  padding: clamp(30px, 5vw, 50px) 20px;
 
   .leaf {
     position: absolute;
     left: 0;
     right: 0;
-    top: -40px;
+    top: -25px;
     margin-inline: auto;
+    width: clamp(80px, 10vw, 120px);
   }
+
   .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+
     .fresh-cat {
       display: flex;
-      align-items: center;
+      align-items: stretch;
       justify-content: center;
-      gap: 40px;
-      margin: 80px 0;
+      gap: clamp(20px, 4vw, 40px);
+      margin: clamp(40px, 8vw, 80px) 0;
       flex-wrap: wrap;
+
       .item {
-        width: 370px;
-        height: 360px;
+        flex: 1 1 300px;
+        max-width: 370px;
+        min-height: 300px;
         background-color: #fefefe;
-        padding: 40px 30px;
+        padding: clamp(20px, 4vw, 40px) clamp(15px, 3vw, 30px);
         display: flex;
         flex-direction: column;
         position: relative;
@@ -37,15 +44,18 @@
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
         z-index: 1;
         gap: 20px;
+
         h1 {
           font-family: 'Merriweather', serif;
-          font-size: 24px;
+          font-size: clamp(20px, 3vw, 24px);
           font-weight: 700;
         }
+
         p {
           font-family: 'Open Sans', sans-serif;
           color: grey;
-          line-height: 26px;
+          line-height: 1.6;
+          font-size: clamp(14px, 2vw, 16px);
         }
 
         .cat-btn {
@@ -53,98 +63,119 @@
           border: none;
           border-radius: 5px;
           font-weight: 700;
-          font-size: 0.875rem;
+          font-size: clamp(12px, 2vw, 14px);
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 160px;
-          padding: 13px 0;
+          width: clamp(140px, 20vw, 160px);
+          padding: clamp(10px, 2vw, 13px) 0;
           background-color: #6a9739;
           font-family: 'Open Sans', sans-serif;
           cursor: pointer;
           transition: all 0.5s ease;
-        }
-        .cat-btn:hover {
-          background-color: #86bd47;
+
+          &:hover {
+            background-color: #86bd47;
+          }
         }
 
         img {
           position: absolute;
           bottom: 2px;
           right: 2px;
-          width: 250px;
+          width: clamp(180px, 40%, 250px);
           z-index: -1;
         }
       }
     }
   }
-  .bottom {
-    position: relative;
-    background-color: #111;
-    width: 100%;
-    padding: clamp(30px, 5vw, 50px) 20px;
+}
+.cat-bottom {
+  position: relative;
+  background-color: #111;
+  width: 100%;
 
-    .bott-con {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      gap: clamp(20px, 4vw, 40px);
-      max-width: 1200px;
-      margin: 0 auto;
+  padding: clamp(30px, 5vw, 50px) 20px;
+  align-self: center;
+  .bott-con {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(20px, 4vw, 40px);
+    max-width: 1200px;
+    margin: 0 auto;
 
-      h1 {
-        flex: 1 1 300px;
-        font-size: clamp(24px, 4vw, 36px);
-        text-wrap: wrap;
-        color: #fefefe;
-        font-family: 'Merriweather', serif;
-        text-align: center;
-      }
-
-      button {
-        flex: 0 0 auto;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-weight: 700;
-        font-size: clamp(14px, 2vw, 16px);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: clamp(140px, 20vw, 180px);
-        padding: clamp(10px, 2vw, 15px) 0;
-        background-color: #6a9739;
-        font-family: 'Open Sans', sans-serif;
-        cursor: pointer;
-        transition: all 0.5s ease;
-
-        &:hover {
-          background-color: #86bd47;
-        }
-      }
+    h1 {
+      flex: 1 1 300px;
+      font-size: clamp(24px, 4vw, 36px);
+      text-wrap: balance;
+      color: #fefefe;
+      font-family: 'Merriweather', serif;
+      text-align: center;
     }
 
-    .arrow {
-      position: absolute;
-      margin-left: auto;
-      margin-right: auto;
-      left: 0;
-      right: 0;
-      width: clamp(30px, 5vw, 50px);
-      height: clamp(30px, 5vw, 50px);
-      background-color: #111;
-      bottom: -5px;
-      transform: rotate(45deg);
+    button {
+      flex: 0 0 auto;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: 700;
+      font-size: clamp(14px, 2vw, 16px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: clamp(140px, 20vw, 180px);
+      padding: clamp(10px, 2vw, 15px) 0;
+      background-color: #6a9739;
+      font-family: 'Open Sans', sans-serif;
+      cursor: pointer;
+      transition: all 0.5s ease;
+
+      &:hover {
+        background-color: #86bd47;
+      }
     }
   }
 
+  .arrow {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    width: clamp(30px, 5vw, 50px);
+    height: clamp(30px, 5vw, 50px);
+    background-color: #111;
+    bottom: -5px;
+    transform: rotate(45deg);
+  }
   .try {
+    position: absolute;
+    bottom: -80px;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: clamp(80px, 3vw, 100px);
+    background-color: #f8f6f3;
     text-align: center;
     font-size: clamp(18px, 3vw, 24px);
     font-weight: 700;
     font-family: 'Merriweather', serif;
-    margin-top: clamp(20px, 4vw, 30px);
-    margin-bottom: clamp(20px, 4vw, 30px);
+  }
+}
+
+@media (max-width: 768px) {
+  .categories {
+    .container {
+      .fresh-cat {
+        .item {
+          flex-basis: 100%;
+        }
+      }
+    }
   }
 }

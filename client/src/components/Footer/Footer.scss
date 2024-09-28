@@ -27,12 +27,12 @@
   }
 
   .wrapper {
-    width: 90%;
-    max-width: 1200px;
+    width: 90vw;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     gap: clamp(30px, 5vw, 50px);
 
     .left {
@@ -103,6 +103,23 @@
 
         .column {
           width: 100%;
+        }
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    .wrapper {
+      text-align: center;
+      .logo {
+        align-self: center;
+      }
+      .right {
+        flex: 2 1;
+        .f-img {
+          align-self: center;
+        }
+        .column {
+          height: fit-content;
         }
       }
     }

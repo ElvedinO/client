@@ -46,16 +46,16 @@ const Categories = () => {
             </div>
           </div>
         </div>
-        <div className='bottom'>
-          <div className='bott-con'>
-            <h1>Get 25% Off On Your First Purchase!</h1>
-            <button>
-              <ShoppingCartOutliedIcon />
-              SHOP NOW
-            </button>
-          </div>
-          <div className='arrow'></div>
+      </div>
+      <div className='cat-bottom'>
+        <div className='bott-con'>
+          <h1>Get 25% Off On Your First Purchase!</h1>
+          <button>
+            <ShoppingCartOutliedIcon />
+            SHOP NOW
+          </button>
         </div>
+        <div className='arrow'></div>
         <p className='try'>Try It For Free. No Registration Needed.</p>
       </div>
     </>

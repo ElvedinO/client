@@ -59,17 +59,19 @@ const Product = () => {
               </span>
               <p>{data?.attributes?.desc}</p>
               <div className='quantity'>
-                <button
-                  onClick={() =>
-                    setQuantity((prev) => (prev === 1 ? 1 : prev - 1))
-                  }
-                >
-                  -
-                </button>
-                {quantity}
-                <button onClick={() => setQuantity((prev) => prev + 1)}>
-                  +
-                </button>{' '}
+                <div className='q-buttons'>
+                  <button
+                    onClick={() =>
+                      setQuantity((prev) => (prev === 1 ? 1 : prev - 1))
+                    }
+                  >
+                    -
+                  </button>
+                  {quantity}
+                  <button onClick={() => setQuantity((prev) => prev + 1)}>
+                    +
+                  </button>{' '}
+                </div>
                 <button
                   className='add'
                   onClick={() =>

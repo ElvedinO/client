@@ -43,7 +43,7 @@ const About = () => {
         <div className='bottom'>
           <img className='leaf' src='../images/basil-leaf.png' alt='' />
           <div className='bot-wrap'>
-            <div>
+            <div className='bot-left'>
               <h1>We Are Your Favourite Store.</h1>
               <p>
                 Tuas quisquam quo gravida proident harum, aptent ligula anim
@@ -59,7 +59,9 @@ const About = () => {
                 platea corrupti expedita.
               </p>
             </div>
-            <img src='../images/about1.jpg' alt='' />
+            <div className='bot-right'>
+              <img src='../images/about1.jpg' alt='' />
+            </div>
           </div>
         </div>
       </div>
