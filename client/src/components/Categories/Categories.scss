@@ -10,9 +10,9 @@
     position: absolute;
     left: 0;
     right: 0;
-    top: -25px;
+    top: -30px;
     margin-inline: auto;
-    width: clamp(80px, 10vw, 120px);
+    width: clamp(120px, 10vw, 160px);
   }
 
   .container {
@@ -94,7 +94,7 @@
   position: relative;
   background-color: #111;
   width: 100%;
-
+  margin-bottom: 80px;
   padding: clamp(30px, 5vw, 50px) 20px;
   align-self: center;
   .bott-con {
@@ -147,7 +147,7 @@
     width: clamp(30px, 5vw, 50px);
     height: clamp(30px, 5vw, 50px);
     background-color: #111;
-    bottom: -5px;
+    bottom: -10px;
     transform: rotate(45deg);
   }
   .try {
@@ -170,6 +170,9 @@
 
 @media (max-width: 768px) {
   .categories {
+    .leaf {
+      top: -20px;
+    }
     .container {
       .fresh-cat {
         .item {

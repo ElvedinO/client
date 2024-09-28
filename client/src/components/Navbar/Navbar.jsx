@@ -31,7 +31,8 @@ const Navbar = () => {
       <div
         className='navbar'
         style={
-          window.location.href.split('/').includes('about')
+          window.location.href.split('/').includes('about') ||
+          window.location.href.split('/').includes('contact')
             ? { backgroundColor: '#F8F6F3' }
             : null
         }
@@ -81,7 +82,7 @@ const Navbar = () => {
               </Link>
               <Link
                 className={`link ${clickedLink === 'contact' ? 'clicked' : ''}`}
-                to='/'
+                to='/contact'
                 onClick={() => handleLinkClick('contact')}
               >
                 Contact
