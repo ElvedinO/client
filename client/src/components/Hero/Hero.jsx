@@ -3,24 +3,29 @@ import './Hero.scss';
 import ShoppingCartOutliedIcon from '@mui/icons-material/ShoppingCartOutlined';
 
 const Hero = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  // const [currentSlide, setCurrentSlide] = useState(0);
 
-  const prevSlide = () => {
-    setCurrentSlide(currentSlide === 0 ? 2 : (prev) => prev - 1);
-  };
-  const nextSlide = () => {
-    setCurrentSlide(currentSlide === 2 ? 0 : (prev) => prev + 1);
-  };
+  // const prevSlide = () => {
+  //   setCurrentSlide(currentSlide === 0 ? 2 : (prev) => prev - 1);
+  // };
+  // const nextSlide = () => {
+  //   setCurrentSlide(currentSlide === 2 ? 0 : (prev) => prev + 1);
+  // };
 
   return (
     <div className='slider'>
       <img className='hero-leaves' src='./images/hero-leaves.png' alt='' />
       <div
         className='container'
-        style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
+        // style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
         <div className='left'>
-          <img className='hero-img' src='./images/hero.webp' alt='' />
+          <img
+            fetchpriority='high'
+            className='hero-img'
+            src='./images/hero.webp'
+            alt='hero-img'
+          />
         </div>
         <div className='right'>
           <img src='./images/hero-leaf.png' alt='' className='leaf-icon' />
