@@ -9,10 +9,7 @@ const Card = ({ item }) => {
         <div className='image'>
           {item?.attributes.isNew && <div className='sale'>Sale!</div>}
           <img
-            src={
-              process.env.REACT_APP_UPLOAD_URL +
-              item.attributes?.img?.data?.attributes?.url
-            }
+            src={item.attributes?.img?.data?.attributes?.url}
             alt=''
             className='mainImg'
           ></img>

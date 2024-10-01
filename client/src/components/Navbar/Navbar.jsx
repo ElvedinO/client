@@ -39,7 +39,7 @@ const Navbar = () => {
       >
         <div className='wrapper'>
           <div className='left'>
-            <Link to='http://localhost:3000/'>
+            <Link to='https://ve-comm.netlify.app/'>
               <img className='logo' src='./images/logo.svg' alt='' />
             </Link>
             <div className='nav-links'>
@@ -47,7 +47,7 @@ const Navbar = () => {
                 className={`link ${
                   clickedLink === 'everything' ? 'clicked' : ''
                 }`}
-                to='products/1'
+                to='products/everything'
                 onClick={() => handleLinkClick('everything')}
               >
                 Everything
@@ -56,14 +56,14 @@ const Navbar = () => {
                 className={`link ${
                   clickedLink === 'groceries' ? 'clicked' : ''
                 }`}
-                to='products/2'
+                to='products/groceries'
                 onClick={() => handleLinkClick('groceries')}
               >
                 Groceries
               </Link>
               <Link
                 className={`link ${clickedLink === 'juice' ? 'clicked' : ''}`}
-                to='products/3'
+                to='products/juice'
                 onClick={() => handleLinkClick('juice')}
               >
                 Juice

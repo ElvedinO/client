@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
 
 const Products = ({ item }) => {
-  const catId = parseInt(useParams().id);
+  const catId = useParams().id;
   const [maxPrice, setMaxPrice] = useState(100);
   const [sort, setSort] = useState('asc'); // Set default sort to 'asc'
   const [selectedSubCats, setSelectedSubCats] = useState([]);
@@ -92,21 +92,25 @@ const Products = ({ item }) => {
 
         <div className='right'>
           <h3>
-            <Link to='http://localhost:3000'>Home</Link> /
-            {catId === 1
+            <Link to='https://ve-comm.netlify.app/'>Home</Link> /
+            {catId === 'everything'
               ? ' All Products'
-              : catId === 2
+              : catId === 'groceries'
               ? ' Groceries'
               : ' Juice'}
           </h3>
           <h1>
-            {catId === 1 ? 'All Products' : catId === 2 ? 'Groceries' : 'Juice'}
+            {catId === 'everything'
+              ? 'All Products'
+              : catId === 'groceries'
+              ? 'Groceries'
+              : 'Juice'}
           </h1>
           <p>
             {' '}
-            {catId === 1
+            {catId === 'everything'
               ? 'Browse our full range of high-quality groceries, beverages, and household essentials. From fresh produce and pantry staples to refreshing juices, snacks, and daily necessities, we offer everything you need for convenient shopping in one place.'
-              : catId === 2
+              : catId === 'groceries'
               ? 'Explore a wide variety of fresh and packaged groceries, including staples like rice, grains, dairy, and snacks. Our high-quality products ensure your pantry is always stocked with the essentials for every meal. Shop conveniently for all your daily cooking and household needs.'
               : 'Quench your thirst with our selection of natural, refreshing juices. From classic flavors like orange and apple to exotic blends, we offer both fresh and packaged options to suit your preferences. Perfect for a healthy start to your day or an invigorating mid-day refreshment.'}
           </p>
