@@ -1,5 +1,6 @@
 const { createContext } = require("react");
 
+// @ts-ignore
 const stripe = require("stripe")(process.env.STRIPE_KEY);
 
 ("use strict");
@@ -12,6 +13,7 @@ const { createCoreController } = require("@strapi/strapi").factories;
 
 module.exports = createCoreController("api::order.order", ({ strapi }) => ({
   async create(ctx) {
+    // @ts-ignore
     const { products } = ctx.request.body;
 
     const lineItems = await Promise.all(

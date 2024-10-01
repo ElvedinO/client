@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Cart.scss';
 import CancelOutlinedIcon from '@mui/icons-material/CancelOutlined';
 import CloseIcon from '@mui/icons-material/Close';

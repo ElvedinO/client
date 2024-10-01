@@ -120,7 +120,7 @@ const Navbar = () => {
                   className={`link ${
                     clickedLink === 'everything' ? 'clicked' : ''
                   }`}
-                  to='products/1'
+                  to='products/everything'
                   onClick={() => handleLinkClick('everything')}
                 >
                   Everything
@@ -131,7 +131,7 @@ const Navbar = () => {
                   className={`link ${
                     clickedLink === 'groceries' ? 'clicked' : ''
                   }`}
-                  to='products/2'
+                  to='products/groceries'
                   onClick={() => handleLinkClick('groceries')}
                 >
                   Groceries
@@ -140,7 +140,7 @@ const Navbar = () => {
               <li>
                 <Link
                   className={`link ${clickedLink === 'juice' ? 'clicked' : ''}`}
-                  to='products/3'
+                  to='products/juice'
                   onClick={() => handleLinkClick('juice')}
                 >
                   Juice
