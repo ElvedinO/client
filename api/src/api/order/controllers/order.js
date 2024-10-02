@@ -1,19 +1,12 @@
-const { createContext } = require("react");
-
-// @ts-ignore
-const stripe = require("stripe")(process.env.STRIPE_KEY);
-
-("use strict");
-
-/**
- * order controller
- */
+const Stripe = require("stripe");
+const stripe = Stripe(
+  "sk_test_51Pw5o4Ds8mgCb63kaHebxPjQC0wFqMBPRaXp2Enufe6p42zVdwuMoByJbouUn5DiD9uNnM2ExwJW0UFDvhCqjEOH00dQqCYalc"
+);
 
 const { createCoreController } = require("@strapi/strapi").factories;
 
 module.exports = createCoreController("api::order.order", ({ strapi }) => ({
   async create(ctx) {
-    // @ts-ignore
     const { products } = ctx.request.body;
 
     const lineItems = await Promise.all(
@@ -38,8 +31,8 @@ module.exports = createCoreController("api::order.order", ({ strapi }) => ({
     try {
       const session = await stripe.checkout.sessions.create({
         mode: "payment",
-        success_url: `${process.env.CLIENT_URL}?success=true`,
-        cancel_url: `${process.env.CLIENT_URL}?success=false`,
+        success_url: `https://organiclife.netlify.app/?success=true`,
+        cancel_url: `https://organiclife.netlify.app/?success=false`,
         line_items: lineItems,
         shipping_address_collection: { allowed_countries: ["US"] },
         payment_method_types: ["card"],

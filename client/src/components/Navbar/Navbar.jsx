@@ -39,7 +39,7 @@ const Navbar = () => {
       >
         <div className='wrapper'>
           <div className='left'>
-            <Link to='https://ve-comm.netlify.app/'>
+            <Link to='https://organiclife.netlify.app/'>
               <img className='logo' src='./images/logo.svg' alt='' />
             </Link>
             <div className='nav-links'>
