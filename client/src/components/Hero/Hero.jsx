@@ -1,24 +1,32 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Hero.scss';
 import ShoppingCartOutliedIcon from '@mui/icons-material/ShoppingCartOutlined';
+import Popup from '../Popup/Popup';
 
 const Hero = () => {
-  // const [currentSlide, setCurrentSlide] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
 
-  // const prevSlide = () => {
-  //   setCurrentSlide(currentSlide === 0 ? 2 : (prev) => prev - 1);
-  // };
-  // const nextSlide = () => {
-  //   setCurrentSlide(currentSlide === 2 ? 0 : (prev) => prev + 1);
-  // };
+  useEffect(() => {
+    if (window.location.href.includes('success=true')) {
+      setShowPopup(true);
+    }
+    if (window.location.href.includes('success=false')) {
+      setShowPopup(true);
+    }
+  }, []);
+
+  const handleShowPopup = () => {
+    setShowPopup(true);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+  };
 
   return (
     <div className='slider'>
       <img className='hero-leaves' src='./images/hero-leaves.png' alt='' />
-      <div
-        className='container'
-        // style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
-      >
+      <div className='container'>
         <div className='left'>
           <img
             fetchpriority='high'
@@ -36,13 +44,24 @@ const Hero = () => {
             tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </p>
           <div className='hero-btn'>
-            <button>
+            <button onClick={handleShowPopup}>
               <ShoppingCartOutliedIcon />
               SHOP NOW
             </button>
           </div>
         </div>
       </div>
+
+      {showPopup && (
+        <Popup
+          message={`Your payment ${
+            window.location.href.includes('success=true')
+              ? 'has been successfully processed. Your order will be on its way soon! If you have any questions, feel free to reach out.'
+              : 'failed! Please check your payment details and try again. If you need assistance, let us know.'
+          } `}
+          onClose={handleClosePopup}
+        />
+      )}
     </div>
   );
 };

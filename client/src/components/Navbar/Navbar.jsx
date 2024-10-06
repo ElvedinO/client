@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import PersonOutlineIcon from '@mui/icons-material/PersonOutlineOutlined';
 import ShoppingCartOutliedIcon from '@mui/icons-material/ShoppingCartOutlined';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
