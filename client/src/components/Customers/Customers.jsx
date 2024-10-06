@@ -19,10 +19,11 @@ const Customers = () => {
               <StarIcon />
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
-              vero quasi dolores quibusdam saepe praesentium, laudantium
-              doloremque consequatur minima accusamus nobis, voluptatibus, alias
-              beatae dolorum soluta et? Facere, repudiandae suscipit?
+              I've been shopping here for months, and the quality of the organic
+              products is unmatched. The fruits and vegetables are always fresh,
+              and I love knowing everything is sustainably sourced. It's
+              comforting to trust where my food comes from, and it’s making a
+              real difference in my health.
             </p>
             <div className='cust-img'>
               <img src='./images/client1.png' alt='' />
@@ -32,7 +33,7 @@ const Customers = () => {
           <div className='deal'>
             <img src='./images/vegetables.jpg' alt='' />
             <h1>Deal Of The Day 15% Off On All Vegetables!</h1>
-            <p>I am text block. Click edit button to change this tex em ips.</p>
+            <p>Get 15% off your first purchase and enjoy organic goodness!</p>
             <button>
               <ArrowForwardIcon /> SHOP NOW
             </button>
@@ -46,10 +47,11 @@ const Customers = () => {
               <StarIcon />
             </div>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
-              vero quasi dolores quibusdam saepe praesentium, laudantium
-              doloremque consequatur minima accusamus nobis, voluptatibus, alias
-              beatae dolorum soluta et? Facere, repudiandae suscipit?
+              This store has completely changed the way I eat. The organic
+              legumes and fresh produce are always top-notch, and I feel great
+              knowing I'm nourishing my family with clean, natural foods. The
+              staff is knowledgeable and friendly, making shopping here a
+              wonderful experience every time!
             </p>
             <div className='cust-img'>
               <img src='./images/client2.png' alt='' />

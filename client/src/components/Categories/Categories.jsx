@@ -13,8 +13,8 @@ const Categories = () => {
             <div className='item'>
               <h1>Farm Frest Fruits</h1>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum,
-                alias!
+                Enjoy the juiciest, farm-fresh fruits grown naturally and
+                sustainably.
               </p>
               <button className='cat-btn'>
                 <ArrowForwardIcon /> SHOP NOW
@@ -24,8 +24,8 @@ const Categories = () => {
             <div className='item'>
               <h1>Fresh Vegetables</h1>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum,
-                alias!
+                Our fresh vegetables are handpicked daily for superior taste and
+                nutrition.
               </p>
               <button className='cat-btn'>
                 <ArrowForwardIcon /> SHOP NOW
@@ -35,8 +35,8 @@ const Categories = () => {
             <div className='item'>
               <h1>Organic Legume</h1>
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum,
-                alias!
+                Wholesome, nutrient-rich organic legumes sourced sustainably for
+                healthy living.
               </p>
               <button className='cat-btn'>
                 <ArrowForwardIcon /> SHOP NOW

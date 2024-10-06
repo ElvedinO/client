@@ -5,7 +5,7 @@ import StarIcon from '@mui/icons-material/Star';
 import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
 import { useInView } from 'react-intersection-observer';
 import ShoppingCartOutliedIcon from '@mui/icons-material/ShoppingCartOutlined';
-
+import { Link } from 'react-router-dom';
 import Slider from '../Slider/Slider';
 
 const images = [
@@ -46,17 +46,20 @@ const About = () => {
             <div className='bot-left'>
               <h1>We Are Your Favourite Store.</h1>
               <p>
-                Tuas quisquam quo gravida proident harum, aptent ligula anim
-                consequuntur, ultrices mauris, nunc voluptates lobortis, varius,
-                potenti placeat! Fuga omnis. Cubilia congue. Recusandae. Vero
-                penatibus quasi! Nostra tenetur dignissimos ultrices natus
-                distinctio ultrices consequuntur numqu.
+                At our store, we believe in the power of nature and the
+                importance of healthy living. Our commitment to providing
+                high-quality organic products reflects our passion for
+                sustainable practices and customer well-being. We meticulously
+                source our fresh fruits, vegetables, and legumes, ensuring every
+                product is crafted with care and integrity.
                 <br />
                 <br />
-                Officiis fuga harum porro et? Similique rhoncus atque! Netus
-                blanditiis provident nunc posuere. Rem sequi, commodo, lorem
-                tellus elit, hic sem tenetur anim amet quas, malesuada proident
-                platea corrupti expedita.
+                Our team is dedicated to creating a seamless shopping
+                experience, from our user-friendly mobile app to our responsive
+                customer service. We prioritize your health and satisfaction,
+                striving to offer only the best in organic foods. Join us on
+                this journey toward a healthier lifestyle, and discover the true
+                essence of organic living with us.
               </p>
             </div>
             <div className='bot-right'>
@@ -75,8 +78,8 @@ const About = () => {
             <p>Curated Products</p>
           </div>
           <div className='number'>
-            {inView ? <CountUp start={700} end={800} duration={5} /> : null} +
-            <p>Curated Products</p>
+            {inView ? <CountUp start={75} end={95} duration={5} /> : null} %
+            <p>Customer Satisfaction</p>
           </div>
           <div className='number'>
             {inView ? <CountUp start={30} end={40} duration={5} /> : null} +
@@ -107,10 +110,11 @@ const About = () => {
                 <StarIcon />
               </div>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque
-                vero quasi dolores quibusdam saepe praesentium, laudantium
-                doloremque consequatur minima accusamus nobis, voluptatibus,
-                alias beatae dolorum soluta et? Facere, repudiandae suscipit?
+                I've been shopping here for months, and the quality of the
+                organic products is unmatched. The fruits and vegetables are
+                always fresh, and I love knowing everything is sustainably
+                sourced. It's comforting to trust where my food comes from, and
+                it’s making a real difference in my health.
               </p>
               <div className='cust-img'>
                 <img src='./images/client1.png' alt='' />
@@ -127,8 +131,8 @@ const About = () => {
               <div>
                 <h1>Certified Products</h1>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                  Deserunt, magnam.
+                  We are certified organic, ensuring the highest quality for
+                  you.
                 </p>
               </div>
             </div>

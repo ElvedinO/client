@@ -50,7 +50,7 @@ const Cart = ({ isOpen, onClose }) => {
                 <img src={item.img} alt='' />
                 <div className='details'>
                   <h1>{item.title}</h1>
-                  <p>{item.desc?.substring(0, 100)}</p>
+                  <p className='item-desc'>{item.desc?.substring(0, 100)}...</p>
                   <div className='price'>
                     {item.quantity} x ${item.price}.00
                   </div>

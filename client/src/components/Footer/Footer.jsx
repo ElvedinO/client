@@ -8,21 +8,22 @@ const Footer = () => {
         <div className='left'>
           <img src='./images/logo-white.png' alt='Logo' className='logo' />
           <p>
-            Maecenas mi justo, interdum at consectetur vel, tristique et arcu.
-            Ut quis eros blandit, ultrices diam in, elementum ex. Suspendisse
-            quis faucibus urna. Suspendisse pellentesque.
+            Stay connected with us for the latest updates, promotions, and
+            exclusive offers. Follow us on social media or subscribe to our
+            newsletter. Your health and satisfaction are our top priorities, and
+            we appreciate your support in choosing organic.
           </p>
         </div>
         <div className='right'>
           <div className='column'>
             <h2>Quick Links</h2>
-            <a href='#'>About</a>
-            <a href='#'>Cart</a>
-            <a href='#'>Checkout</a>
-            <a href='#'>Contact</a>
             <a href='#'>Home</a>
-            <a href='#'>My account</a>
+            <a href='#'>About</a>
             <a href='#'>Shop</a>
+            <a href='#'>Cart</a>
+            <a href='#'>Contact</a>
+            <a href='#'>Checkout</a>
+            <a href='#'>My account</a>
           </div>
           <div className='column'>
             <h2>Site Links</h2>
@@ -34,9 +35,8 @@ const Footer = () => {
           <div className='column'>
             <h2>Download Our Mobile App</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              aliquam gravida sollicitudin. Praesent porta enim mi, non
-              tincidunt libero interdum sit amet.
+              Download our app for easy access to fresh, organic products. Shop
+              conveniently, track orders, and enjoy exclusive offers anytime!
             </p>
           </div>
           <div className='column'>

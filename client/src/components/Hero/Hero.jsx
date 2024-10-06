@@ -40,11 +40,11 @@ const Hero = () => {
           <h2>Best Quality Products</h2>
           <h1>Join The Organic Movement!</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+            Discover the true essence of organic living with our pure,
+            sustainably sourced food and drinks, crafted for your well-being.
           </p>
           <div className='hero-btn'>
-            <button onClick={handleShowPopup}>
+            <button>
               <ShoppingCartOutliedIcon />
               SHOP NOW
             </button>

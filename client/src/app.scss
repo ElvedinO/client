@@ -5,7 +5,13 @@
   margin: 0;
   padding: 0;
 }
+::-moz-selection {
+  background: #86bd47;
+}
 
+::selection {
+  background: #86bd47;
+}
 .app {
   .link {
     color: inherit;
